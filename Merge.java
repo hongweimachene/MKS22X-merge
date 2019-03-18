@@ -1,16 +1,6 @@
 public class Merge{
   public static void mergesort(int[] data) {
-    int[] left = new int[data.length/2];
-    int[] right = new int[data.length-data.length/2];
-    for (int i = 0; i < data.length; i++) {
-      if (i < data.length/2) {
-        left[i] = data[i];
-      } else {
-        right[i] = data[i];
-      }
-    }
-    mergesort(left,0,left.length-1);
-    mergesort(right,0,right.length-1);
+    mergesort(data, 0, data.length-1);
   }
   private static void mergesort(int[]data, int start, int end){
     if (start >= end) {
@@ -25,7 +15,17 @@ public class Merge{
         right[i] = data[i];
       }
     }
-    mergesort
+
+    mergesort(left, start, left.length-1);
+    mergesort(right, left.length, end);
+    merge(data,left,right);
+  }
+
+  private static void merge(int[] data, int[] left, int[] right) {
+    for (int i = 0; i < left.length; i++) {
+      for (int j = 0; j )
+      }
+    }
   }
 
 }
