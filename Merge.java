@@ -22,10 +22,9 @@ public class Merge{
   }
 
   private static void merge(int[] data, int[] left, int[] right) {
-    for (int i = 0; i < left.length; i++) {
-      for (int j = 0; j )
-      }
-    }
+    int lc = 0;
+    int rc = 0;
+    for (int = 0; )
   }
 
 }
