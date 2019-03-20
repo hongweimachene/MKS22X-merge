@@ -43,7 +43,7 @@ public class Merge{
       }
     } else {
       for (int j = 0; j < left.length; j++) {
-        data[j] = left[j];
+        data[i] = left[j];
         i++;
       }
     }
