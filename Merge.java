@@ -24,7 +24,23 @@ public class Merge{
   private static void merge(int[] data, int[] left, int[] right) {
     int lc = 0;
     int rc = 0;
-    for (int = 0; )
+    for (int i = 0; i < data.length ;i++ ) {
+      if (lc >= left.length) {
+
+      }
+      if (rc >= right.length) {
+        data[i] = left[lc];
+        lc++;
+      }
+      if (left[lc] > right[rc]) {
+        data[i] = right[rc];
+        rc++;
+      }
+      if (left[lc] <= right[rc]) {
+        data[i] = left[lc];
+        lc++;
+      }
+    }
   }
 
 }
