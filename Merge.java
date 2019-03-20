@@ -15,7 +15,6 @@ public class Merge{
         right[i] = data[i];
       }
     }
-
     mergesort(left, start, left.length-1);
     mergesort(right, left.length, end);
     merge(data,left,right);
@@ -24,21 +23,28 @@ public class Merge{
   private static void merge(int[] data, int[] left, int[] right) {
     int lc = 0;
     int rc = 0;
-    for (int i = 0; i < data.length ;i++ ) {
-      if (lc >= left.length) {
-
-      }
-      if (rc >= right.length) {
-        data[i] = left[lc];
-        lc++;
-      }
+    int i= 0;
+    while (lc < left.length && rc < right.length) {
       if (left[lc] > right[rc]) {
         data[i] = right[rc];
         rc++;
+        i++;
       }
       if (left[lc] <= right[rc]) {
         data[i] = left[lc];
         lc++;
+        i++;
+      }
+    }
+    if (lc >= left.length) {
+      for (int j= 0; j < right.length; j++) {
+        data[i] = right[j];
+        i++;
+      }
+    } else {
+      for (int j = 0; j < left.length; j++) {
+        data[j] = left[j];
+        i++;
       }
     }
   }
