@@ -62,7 +62,7 @@ public class Merge{
         data[i] = right[rc];
         rc++;
       } else
-      //if a value on the left is less than or equal a value on the right, insert that left value and shift to check the next left index
+      //if a value on the left is less than or equal a value on the right, insert the left value and shift to check next left index
       if (left[lc] <= right[rc]) {
         data[i] = left[lc];
         lc++;
